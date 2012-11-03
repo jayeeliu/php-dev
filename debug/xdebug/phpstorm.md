@@ -37,13 +37,13 @@ Debug port默认是9000，与debug server端的xdebug.remote_port对应。
 
 - 设置“Configuration”
 
-	1. Servers，用来设置运行程序的server信息，通过右侧的按钮设置server，如下图：
+  1. Servers，用来设置运行程序的server信息，通过右侧的按钮设置server，如下图：
 	![phpstorm-add-remote-debug-server](../../images/debug/xdebug/phpstorm-add-remote-debug-server.png?raw=true)
 	1)  Host指debug server，如果是本地可以直接设置localhost，事例中设置域名，并在hosts文件中添加域名指向，便于使用不同server调试；  
 	2)  当server端的代码路径和本地代码路径不同时，就需要用“Use Path Mappings”来设置本地和server端文件路径的对应关系，注意是绝对路径，不能是相对路径或软连接；
 	![phpstorm-use-path-mappings](../../images/debug/xdebug/phpstorm-use-path-mappings.png?raw=true)
 	
-	2. ide key(session id)，此值设置与下面介绍的XDEBUG_SESSION设置相同即可；
+  2. ide key(session id)，此值设置与下面介绍的XDEBUG_SESSION设置相同即可；
 
 - 确认后，启动 Run -> Start Listen PHP Debug Connetctions，此时PHPStorm开始监听Debug port。
 
