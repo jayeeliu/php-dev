@@ -1,6 +1,6 @@
 # Xdebug
 
-**`需要client端和server同时支持xdebug。`**
+**`需要server支持xdebug。`**
 
 ## 一、xdebug 安装和配置
 ### xdebug
