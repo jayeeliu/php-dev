@@ -34,8 +34,8 @@ xdebug 文档 <http://xdebug.org/doc/all>
 #### 配置说明
 1. zend_extension="/path-to-xdebug.so"，指定xdebug扩展路径   
 	**注意**  
-	1) 不能使用extension="/path-to-xdebug.so"加载xdebug;  
-	2) 必须是绝对路径 [extension与zend_extension区别](http://stackoverflow.com/questions/1758014/whats-the-difference-between-extension-and-zend-extension-in-php-ini)
+	1) 不能使用extension="/path-to-xdebug.so"加载xdebug [extension与zend_extension区别](http://stackoverflow.com/questions/1758014/whats-the-difference-between-extension-and-zend-extension-in-php-ini);  
+	2) 必须是绝对路径 
 2. xdebug.remote_enable  
 	设置是否启用remote debugging功能，默认不开启；
 3. xdebug.remote_mode  
