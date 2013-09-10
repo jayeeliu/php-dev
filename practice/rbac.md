@@ -22,3 +22,18 @@
 4. 所有权限最终累加体现在用户身上，权限控制顺序：user > group > deny > allow；
 
 ## 代码事例
+
+```
+Controller
+  |-- Acl
+  |-- Menu
+  `-- User
+```
+
+```
+Model
+  |-- ActionList
+  |-- Acl
+  |-- Menu
+  `-- User
+```

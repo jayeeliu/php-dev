@@ -8,7 +8,7 @@ CREATE TABLE `prefix_allacl` (
 
 
 CREATE TABLE `prefix_group` (
-  `gid` int(11) NOT NULL AUTO_INCREMENT COMMENT '组id',
+  `gid` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '组id',
   `gname` varchar(16) CHARACTER SET utf8 NOT NULL COMMENT '组名',
   `description` text CHARACTER SET utf8 NOT NULL COMMENT '描述',
   `ctime` datetime NOT NULL COMMENT '创建时间',
@@ -52,7 +52,7 @@ CREATE TABLE `prefix_menu` (
 
 CREATE TABLE `prefix_menu_controller` (
   `mid` int(10) unsigned NOT NULL,
-  `lid` int(10) unsigned NOT NULL COMMENT 'å·¦å¯¼id',
+  `lid` int(10) unsigned NOT NULL,
   `uname` char(16) NOT NULL,
   `controller` char(64) CHARACTER SET ascii NOT NULL,
   `action` char(64) CHARACTER SET ascii NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE `prefix_menu_controller` (
 
 
 CREATE TABLE `prefix_user` (
-  `uid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'uid(员工号)',
+  `uid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'uid',
   `uname` varchar(16) CHARACTER SET utf8 NOT NULL COMMENT '用户名',
   `nick` varchar(16) CHARACTER SET utf8 NOT NULL COMMENT '昵称',
   `password` char(32) CHARACTER SET utf8 NOT NULL COMMENT '用户密码（可能为空）',
@@ -81,7 +81,7 @@ CREATE TABLE `prefix_useracl` (
   `uid` int(10) unsigned NOT NULL,
   `controller` char(64) NOT NULL,
   `action` char(64) NOT NULL,
-  `option` enum('allow','deny') NOT NULL COMMENT '细化权限（页面内部）',
+  `option` enum('allow','deny') NOT NULL COMMENT '具体的权限',
   UNIQUE KEY `uid` (`uid`,`controller`,`action`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='用户和用户权限应关系';
 
