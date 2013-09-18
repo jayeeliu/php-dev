@@ -22,6 +22,8 @@
 4. 所有权限最终累加体现在用户身上，权限控制顺序：user > group > deny > allow；
 
 ## 代码事例
+1. [代码片段](./rbac/code) ```注意，这里从框架中copy出的代码，不适合直接运行```
+2. [数据库结构](./rbac/rbac.sql)
 
 ```
 Controller
@@ -37,3 +39,4 @@ Model
   |-- Menu
   `-- User
 ```
+
