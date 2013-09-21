@@ -38,7 +38,7 @@ class CContext extends Context {
 		$method = 'get_' . $name;
 
 		if (!$this->offsetExists($name) && method_exists($this, $method)) {
-			$this->$method();
+			parent::offsetSet($name, $this->$method());
 		}
 		return parent::offsetGet($name);
 	}
@@ -65,10 +65,9 @@ class CContext extends Context {
 	 */
 	protected function get_userinfo() {
 		$user = new User();
-		if (parent::offsetGet('user') === null) {
-			$userinfo = $user->get();
-		}
+		$info = $user->get();
 		unset($user);
+		return $info;
 	}
 
 }
