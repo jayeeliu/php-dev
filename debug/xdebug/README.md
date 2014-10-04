@@ -48,7 +48,7 @@ xdebug 文档 <http://xdebug.org/doc/all>
 5. xdebug.remote_port  
 	用于设置调试客户端所用的端口，默认为9000，需要与客户端监听的端口相同；
 6. xdebug.idekey  
-	默认空，在做web流程的开发调试过程中，忽略此值（笔者建议）；
+	默认空，在做web的开发调试过程中，与XDEBUG_SESSION值相同；
 7. xdebug.remote_handler  
 	定义debug server与客户端交互协议，新版本中都使用[DBGp协议](http://xdebug.org/docs-dbgp.php DBGp)
 8. xdebug.remote_connect_back  
