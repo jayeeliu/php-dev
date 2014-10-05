@@ -38,7 +38,7 @@ Debug port默认是9000，与debug server端的xdebug.remote_port对应。
 - 设置“Configuration”
 
   1. Servers，用来设置运行程序的server信息，通过右侧的按钮设置server，如下图：
-	![phpstorm-add-remote-debug-server](../../images/debug/xdebug/phpstorm-add-remote-debug-server.png?raw=true)
+	![phpstorm-add-remote-debug-server](../../images/debug/xdebug/phpstorm-add-remote-debug-server.png?raw=true)  
 	1)  Host指debug server，如果是本地可以直接设置localhost，事例中设置域名，并在hosts文件中添加域名指向，便于使用不同server调试；  
 	2)  当server端的代码路径和本地代码路径不同时，就需要用“Use Path Mappings”来设置本地和server端文件路径的对应关系，注意是绝对路径，不能是相对路径或软连接；
 	![phpstorm-use-path-mappings](../../images/debug/xdebug/phpstorm-use-path-mappings.png?raw=true)
@@ -54,7 +54,7 @@ Debug port默认是9000，与debug server端的xdebug.remote_port对应。
 Debug Server在配置xdebug后并不会进入调试状态，用户可以通过向debug server的请求中添加 XDEBUG_SESSION 来触发，XDEBUG_SESSION可用来标识当前请求需要与PHPStorm中的哪个项目相关（上一节中的ide key对应），触发方式如下：
 
 1. 通过url参数方式  
-	将 XDEBUG_SESSION 作为请求参数，值可自定义，如http://x.com/?XDEBUG_SESSION_STARTß=PHPSTORM；
+	将 XDEBUG_SESSION 作为请求参数，值可自定义，如http://x.com/?XDEBUG_SESSION_START=PHPSTORM；
 2. 通过cookie（建议使用此方式）  
 	将 XDEBUG_SESSION 作为cookie传递（进程cookie）  
 	PHPStorm官方提供了生成用一小段js作为书签的方式种cookie，[PHPStorm生成书签](http://www.jetbrains.com/phpstorm/marklets/)，还提供了一些浏览器提供了插件：  
